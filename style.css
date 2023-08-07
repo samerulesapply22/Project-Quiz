@@ -1,0 +1,77 @@
+* {
+  font-family: Georgia;
+  text-align: center;
+  border: 1px solid black;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.questionContainer,
+.choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionContainer {
+  height: 30vh;
+  font-size: 10vh;
+}
+
+.answersContainer {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.choice {
+  font-size: 5vh;
+  cursor: pointer;
+}
+
+.nextQuestionContainer {
+  height: 15vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 3em;
+  border: none;
+}
+
+.startQuiz,
+.nextQuestion {
+  padding: 1em 2.5em;
+  background-color: lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 3vh;
+}
+
+.startQuiz:hover,
+.nextQuestion:hover {
+  background-color: rgb(5, 5, 54);
+  color: whitesmoke;
+}
+
+.correct {
+  background-color: darkgreen;
+}
+
+.incorrect {
+  background-color: darkred;
+}

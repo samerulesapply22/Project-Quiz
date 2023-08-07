@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Flashcards</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <div class="questionContainer">Question?</div>
+        <div class="answersContainer">
+          <div class="choice">corrent answer</div>
+          <div class="choice">wrong answer 1</div>
+          <div class="choice">wrong answer 2</div>
+          <div class="choice">wrong answer 3</div>
+        </div>
+      </form>
+      <div class="nextQuestionContainer">
+        <button type="submit" class="nextQuestion">Next Question</button>
+      </div>
+    </div>
     <script type="module" src="index.js"></script>
-</body>
+  </body>
 </html>
