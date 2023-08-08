@@ -16,7 +16,6 @@ body {
 }
 
 #container {
-  display: none;
   height: 100%;
   width: 100%;
 }
@@ -42,6 +41,9 @@ body {
 .choice {
   font-size: 5vh;
   cursor: pointer;
+  border-radius: 3px;
+  border: 6px solid transparent;
+  outline: 1px solid black;
 }
 
 .nextQuestionContainer {
@@ -68,10 +70,14 @@ body {
   color: whitesmoke;
 }
 
-.correct {
-  background-color: darkgreen;
+.selected {
+  border: 6px solid black;
 }
 
-.incorrect {
-  background-color: darkred;
+.selected.correct {
+  border-color: darkgreen;
+}
+
+.selected.incorrect {
+ border-color: darkred;
 }

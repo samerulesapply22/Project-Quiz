@@ -1,3 +1,3 @@
-import start from "./modules/startQuiz.js";
+import start from "./modules/started.js";
 
 start();
