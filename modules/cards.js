@@ -6,6 +6,7 @@ const QUIZ = {
   question3: "answer3",
   question4: "answer4",
 };
+export let score = 0;
 
 class Card {
   constructor(question, correctAnswer) {
@@ -33,12 +34,9 @@ class Card {
 
     choices.forEach((choice) => {
       choice.addEventListener("click", () => {
-        choices.forEach((choice) => choice.classList.remove("selected"));
-        choice.classList.add("selected");
-        form.classList.add("answered");
         if (choice.textContent === this.correctAnswer) {
           choice.classList.add("correct");
-          form.classList.add("correct");
+          score++;
         } else choice.classList.add("incorrect");
       });
     });

@@ -8,15 +8,29 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: whitesmoke;
+  background-color: #a3000a;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #quizContainer {
-  width: 90vh;
+  width: 80vh;
+  height: 60vh;
   display: none;
+  background-color: whitesmoke;
+  padding: 0px 2rem;
+  border-radius: 20px;
+}
+
+#container {
+  width: 80vh;
+  height: 60vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  border-radius: 20px;
 }
 
 .questionContainer,
@@ -27,72 +41,54 @@ body {
 }
 
 .questionContainer {
-  height: 30vh;
-  font-size: 10vh;
-  border: 2px solid black;
+  height: 25vh;
+  font-size: 5vh;
+
 }
 
 .answersContainer {
-  height: 50vh;
-  border: 2px solid black;
+  height: 30vh;
   border-top: none;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 .choice {
-  font-size: 5vh;
+  font-size: 2.5vh;
   cursor: pointer;
-  border-radius: 3px;
-  border: 6px solid transparent;
+  border-radius: 10px;
+  border: 2px solid transparent;
   outline: 1px solid black;
 }
 
-.nextQuestionContainer {
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-right: 3em;
-  border: none;
+.choice:hover {
+  border: 2px solid rgb(135, 133, 133);
 }
 
-button {
-  padding: 1em 2.5em;
-  background-color: lightgray;
+#quizButton {
+  width: 30vh;
+  padding: 1.5vh 2.5vh;
+  background-color: whitesmoke;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 0.2vh solid black;
   cursor: pointer;
   font-size: 3vh;
 }
 
-button:hover {
-  background-color: rgb(5, 5, 54);
-  color: whitesmoke;
+#quizButton:hover {
+  background-color:rgb(221, 215, 215);
 }
 
 .selected {
-  border: 6px solid black;
+  border: 2px solid black;
 }
-
 .selected.correct {
   border-color: darkgreen;
 }
-
 .selected.incorrect {
   border-color: darkred;
 }
-
 .hidden {
   display: none;
 }
-
-#container {
-  width: 50vh;
-  height: 50vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-

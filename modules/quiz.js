@@ -1,4 +1,4 @@
-import { cardsArray } from "./cards.js";
+import { cardsArray, score } from "./cards.js";
 import { over } from "./state.js";
 
 const quizContainer = document.querySelector("#quizContainer");
@@ -14,26 +14,21 @@ export default function quiz() {
   reset();
   quizContainer.style.display = "block";
   let current = 0;
-  let score = 0;
 
   cardsArray[current].classList.remove("hidden");
 
-  const nextQuestionButton = document.querySelector(".nextQuestion");
-
-  nextQuestionButton.addEventListener("click", () => {
-    if (!cardsArray[current].classList.contains("answered")) return;
-    if (cardsArray[current].classList.contains("correct")) score++;
-
-    cardsArray[current].classList.add("hidden");
-
-    current++;
-    if (current >= cardsArray.length) {
-      current = 0;
-      quizContainer.style.display = "none";
-      const scores = score + "/" + cardsArray.length;
-      over(scores);
-      return;
-    }
-    cardsArray[current].classList.remove("hidden");
-  });
+  choices.forEach((choice) =>
+    choice.addEventListener("click", () => {
+      cardsArray[current].classList.add("hidden");
+      current++;
+      if (current >= cardsArray.length) {
+        current = 0;
+        quizContainer.style.display = "none";
+        const scores = score + "/" + cardsArray.length;
+        over(scores);
+        return;
+      }
+      cardsArray[current].classList.remove("hidden");
+    })
+  );
 }
