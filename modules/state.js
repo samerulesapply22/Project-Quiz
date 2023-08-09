@@ -8,8 +8,8 @@ export function start() {
   quizButton.textContent = "Start Quiz";
 }
 
-export function over() {
+export function over(scores) {
   container.style.display = "flex";
-  title.textContent = "Game over. Your score: ";
+  title.textContent = "Game over. Your score: " + scores;
   quizButton.textContent = "New Quiz";
 }

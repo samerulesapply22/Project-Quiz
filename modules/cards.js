@@ -36,9 +36,10 @@ class Card {
         choices.forEach((choice) => choice.classList.remove("selected"));
         choice.classList.add("selected");
         form.classList.add("answered");
-        if (choice.textContent === this.correctAnswer)
+        if (choice.textContent === this.correctAnswer) {
           choice.classList.add("correct");
-        else choice.classList.add("incorrect");
+          form.classList.add("correct");
+        } else choice.classList.add("incorrect");
       });
     });
 
@@ -46,9 +47,8 @@ class Card {
   }
 }
 
-const cardsArray = [];
+export const cardsArray = [];
 for (let question in QUIZ) {
   const card = new Card(question, QUIZ[question]);
   cardsArray.push(card.render());
 }
-export default cardsArray;
